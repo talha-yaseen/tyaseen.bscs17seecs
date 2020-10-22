@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Web Technologies II - Lab 3</title>
+
+		<!-- For Responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap + Dependencies -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- Page Styling -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<!-- Page Header -->
+		<header id="page-header">
+			<h1>CS441: Web Technologies II</h1>
+			<h2>Lab 3</h2>
+			<h3>Thursday 22 October 2020</h3>
+		</header>
+		<!-- ./Page Header -->
+
+		<!-- Task 1 -->
+		<div id="task1" class="container-fluid task-section">
+			<h2>Task 1</h2>
+			<button class="btn btn-primary" onClick="task1()">Launch Task 1</button>
+			<h4 id="sum" class="red" hidden>Sum: 0</h4>
+		</div>
+		<!-- ./Task 1 -->
+
+		<!-- Task 2 -->
+		<div id="task2" class="container-fluid task-section">
+			<h2>Task 2</h2>
+			<button class="btn btn-primary" onClick="task2()">Launch Task 2</button>
+			<h4 id="task2-correct" class="green">Correct Answer!</h4>
+			<h4 id="task2-incorrect" class="red">Incorrect Answer!</h4>
+		</div>
+		<!-- ./Task 2 -->
+
+		<!-- Task 3 -->
+		<div id="task3" class="container-fluid task-section">
+			<h2>Task 3</h2>
+			<button class="btn btn-primary" onClick="task3()">Launch Task 3</button>
+			<div id="task3-content"></div>
+		</div>
+		<!-- ./Task 3 -->
+
+		<!-- Task 4 -->
+		<div id="task4" class="container-fluid task-section">
+			<h2>Task 4</h2>
+			<p>Please make sure you have done task 3 first.</p>
+			<button class="btn btn-success" onClick="task4Toggle()">Toggle</button>
+			<button class="btn btn-warning" onClick="task4Enlarge()">Enlarge</button>
+			<button class="btn btn-warning" onClick="task4Original()">Original</button>
+			<button class="btn btn-warning" onClick="task4Reduce()">Reduce</button>
+		</div>
+		<!-- ./Task 4 -->
+
+		<!-- Task 5 -->
+		<div id="task5" class="container-fluid task-section">
+			<h2>Task 5</h2>
+			<div id="task5-content" class="row justify-content-around">
+				<div class="col-lg-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut ante in augue ullamcorper placerat suscipit vel quam. Morbi semper ut metus sed tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id nisl ut turpis luctus convallis eu eget quam.</p>
+				</div>
+				<div class="col-lg-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut ante in augue ullamcorper placerat suscipit vel quam. Morbi semper ut metus sed tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id nisl ut turpis luctus convallis eu eget quam.</p>
+				</div>
+				<div class="col-lg-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut ante in augue ullamcorper placerat suscipit vel quam. Morbi semper ut metus sed tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id nisl ut turpis luctus convallis eu eget quam.</p>
+				</div>
+				<div class="col-lg-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut ante in augue ullamcorper placerat suscipit vel quam. Morbi semper ut metus sed tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id nisl ut turpis luctus convallis eu eget quam.</p>
+				</div>
+				<div class="col-lg-2">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut ante in augue ullamcorper placerat suscipit vel quam. Morbi semper ut metus sed tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id nisl ut turpis luctus convallis eu eget quam.</p>
+				</div>
+			</div>
+			<h5>Select Paragraphs</h5>
+			<button class="btn btn-dark">Odd</button>
+			<button class="btn btn-dark">Even</button>
+			<button class="btn btn-dark">First</button>
+			<button class="btn btn-dark">Last</button>
+			<button class="btn btn-dark">Nth</button>
+		</div>
+		<!-- ./Task 5 -->
+
+		<!-- Page Footer -->
+		<footer id="footer">
+			<h2>About This Page</h2>
+			<div class="row justify-content-around">
+				<div class="col-md-4">
+					<p>This page was designed as part of lab # 3 for the course CS441: Web Technologies II (Fall 2020), taught by Dr. Hasan Ali Khattak.</p>
+					<h5>Tools/Frameworks Used:</h5>
+					<p>Bootstrap<br />jQuery</p>
+				</div>
+				<div class="col-md-4">
+					<h4>Submission Information</h4>
+					<p><strong>Submitted by:</strong><br />Talha Yaseen<br />222667<br />BSCS-7B</p>
+					<p><strong>Submission Date: </strong>Thursday 22 October 2020</p>
+				</div>
+			</div>
+		</footer>
+		<!-- ./Page Footer -->
+
+		<!-- JavaScript Code For Tasks -->
+		<script type="text/javascript">
+			function task1() {
+				let number = -1;
+				let sum = 0;
+
+				// Keep obtaining a number from the user until he/she enters 0
+				while (number != 0) {
+					number = parseInt(prompt('Please enter a number, or 0 to stop: '));
+					sum += number;
+				}
+
+				// Update the value of the sum in the document
+				let sumDisplay = document.querySelector('#sum');
+				sumDisplay.removeAttribute('hidden');
+				sumDisplay.innerText = 'Sum: ' + sum;
+			}
+
+			function task2() {
+				let question = 'What is the capital of Germany?';
+				let correctAnswer = 'Berlin';
+				let userAnswer = prompt(question).trim();
+				let correctText = document.querySelector('#task2-correct');
+				let incorrectText = document.querySelector('#task2-incorrect');
+				if (userAnswer == correctAnswer) {
+					correctText.style.display = 'block';
+					incorrectText.style.display = 'none';
+				}
+				else {
+					incorrectText.style.display = 'block';
+					correctText.style.display = 'none';
+				}
+			}
+
+			var content = document.querySelector('#task3-content');
+
+			function task3() {
+				content.innerHTML = ''; // Clear all text inside the div
+
+				// Obtain a number from the user
+				let num = parseInt(prompt('Please enter a number:'));
+
+				//Obtain a string form the user
+				let message = prompt('Please enter a message:');
+
+				// Add the paragraphs to the document
+				for (let i = 0; i < num; i++) {
+					let paragraph = document.createElement('p');
+					let text = document.createTextNode(message);
+					paragraph.appendChild(text);
+					content.appendChild(paragraph);
+				}
+
+				// Show the paragraphs
+				content.style.display = "block";
+			}
+
+			function task4Toggle() {
+				if (content.style.display === "none") {
+					content.style.display = "block";
+				} else {
+					content.style.display = "none";
+				}
+			}
+
+			function task4Enlarge() {
+				content.style.fontSize = '120%';
+			}
+
+			function task4Original() {
+				content.style.fontSize = '100%';
+			}
+
+			function task4Reduce() {
+				content.style.fontSize = '80%';
+			}
+
+			function task5() {
+				// Unselect any selected paragraphs
+				$('#task5-content p').removeClass('selected');
+
+				// Select paragraphs according to the text of the button
+				let btnText = $(this).text();
+
+				switch(btnText) {
+					case 'Odd':
+						$('#task5-content > div:nth-child(odd) p').addClass('selected');
+						break;
+					case 'Even':
+						$('#task5-content > div:nth-child(even) p').addClass('selected');
+						break;
+					case 'First':
+						$('#task5-content > div:first-child p').addClass('selected');
+						break;
+					case 'Last':
+						$('#task5-content > div:last-child p').addClass('selected');
+						break;
+					default:
+						// Nth child
+						let num = parseInt(prompt('Enter paragraph number:'));
+						$(`#task5-content > div:nth-child(${num}) p`).addClass('selected');
+				}
+
+			}
+
+			// Add an event handler to each button for task 5
+			$('#task5 button').on('click', task5);
+		</script>
+		<!-- ./JavaScript Code For Tasks -->
+	</body>
+</html>
